@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Serif:opsz@8..144&display=swap');
+.header{
+    height: 50px;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    border-bottom: #130505 1px solid;
+}
+
+.brand{
+    font-family: 'Open Sans', sans-serif;
+    width: 40%;
+    min-width: 380px;
+    font-size: 20px;
+    font-family: sans-serif;
+    padding-right: 20px;
+    letter-spacing: 1.5px;
+
+}
+.nav{
+    font-family: 'Roboto Serif', serif;
+    justify-content: space-evenly;
+    width: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+     
+}
+li{
+    border-radius: 1.4rem;
+    padding: 5px 15px;
+    font-size: 1rem;
+    margin: 0 10px;
+}
+li:hover a,li:hover{
+    color: #FF4B91 ;
+    background: #130505;
+
+}
+
+
+/* dropdown menu css  */
+.dropdown{
+    display: none;
+    
+}
+.dropdown .menuBtn{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    border-radius: 1.4rem;
+    padding: 5px 15px;
+    min-width: 106px;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+.dropdown .menuBtn:hover{
+    color: #FF4B91 ;
+    background: #130505;
+}
+.dropdownList{
+    background-color: #130505bc;
+    position: absolute;
+    top: 35px;
+    right: 0px;
+    border-radius: 5px;
+    transition: 1s all ease-in;
+    margin-top: 15px;
+    font-family: 'Roboto Serif', serif;
+    padding: 10px 10px;
+    list-style-type: none;
+
+}
+.offStyle{
+    position:absolute;
+    top: 25px;
+    right: -200px;
+    transform: scale(0.1);
+    transition: 1s all;
+  };
+.onStyle {
+    position:absolute;
+    top: 25px;
+    right: 0px;
+    transform: scale(1);
+    transition: 1s all;
+  };
+
+
+.dropdownList .link{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    padding: 5px 15px;
+
+}
+
+@media only screen and (max-width: 840px) {
+    .dropdown{
+        display: block;
+        
+    }
+    .nav{
+        display: none;
+    }
+    .brand{
+        font-size: 18px;
+    }
+    .dropdown .menuBtn{
+        top: 8px;
+        right: 20px;
+    }
+  }
+
+  @media only screen and (max-width: 420px) {
+    .dropdown .menuBtn{
+        top: 5px;
+        right: -40px;
+    }
+    
+    .brand{
+        width: 40%;
+        min-width: 300px;
+        font-size: 17px;
+    }
+  }
