@@ -115,10 +115,10 @@ li:hover a,li:hover{
     }
   }
 
-  @media only screen and (max-width: 420px) {
+  @media only screen and (max-width: 560px) {
     .dropdown .menuBtn{
         top: 5px;
-        right: -40px;
+        right: 5px;
     }
     
     .brand{
