@@ -68,12 +68,23 @@ const Home = () => {
             <h2 style={{ textAlign: "center", paddingBottom: "20px" }}>
               Identity
             </h2>
-            <p className="info">Full Name : MD Akbar Hossan</p>
-            <p className="info">Email : samratakbar667466@gmail.com</p>
-            <p className="info">Phone : +823240324</p>
-            <p className="info">Mobile : +8801879808105</p>
             <p className="info">
-              Address : Agrabad, Halishahar, Chattogram, Bangladesh
+              <span style={{ color: "#FF4B91" }}>Full Name :</span> MD Akbar
+              Hossan
+            </p>
+            <p className="info">
+              <span style={{ color: "#FF4B91" }}>Email :</span>{" "}
+              samratakbar667466@gmail.com
+            </p>
+            <p className="info">
+              <span style={{ color: "#FF4B91" }}>Phone :</span> +823240324
+            </p>
+            <p className="info">
+              <span style={{ color: "#FF4B91" }}>Phone :</span> +8801879808105
+            </p>
+            <p className="info">
+              <span style={{ color: "#FF4B91" }}>Address :</span>
+              Agrabad, Halishahar, Chattogram, Bangladesh
             </p>
           </div>
         </div>

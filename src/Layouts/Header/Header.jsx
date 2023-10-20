@@ -38,7 +38,7 @@ const Header = () => {
               setDropdown(!dropdown);
             }}
           >
-            <ImMenu />
+            <ImMenu className="menuIcon" />
           </div>
           <ul className={`dropdownList ${dropdown ? "onStyle" : "offStyle"}`}>
             <li className="link">

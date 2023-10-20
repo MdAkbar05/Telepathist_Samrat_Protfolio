@@ -75,9 +75,9 @@ li:hover a,li:hover{
 }
 .offStyle{
     position:absolute;
-    top: 25px;
+    top: -300px;
     opacity: 0;
-    transition: 0.3s all ease-out;
+    transition: 0.3s  ease-in;
   };
 .onStyle {
     position:absolute;
@@ -103,6 +103,9 @@ li:hover a,li:hover{
         display: block;
         
     }
+    .dropdownList{
+        z-index: 1000;
+    }
     .nav{
         display: none;
     }
@@ -120,10 +123,15 @@ li:hover a,li:hover{
         top: 5px;
         right: 5px;
     }
-    
+    .dropdown .menuBtn .menuIcon{
+        font-size: 20px;
+    }
+    .dropdownList{
+        z-index: 1000;
+    }
     .brand{
         width: 40%;
         min-width: 300px;
-        font-size: 17px;
+        font-size: 16px;
     }
   }
