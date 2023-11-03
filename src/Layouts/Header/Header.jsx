@@ -1,32 +1,37 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ImMenu } from "react-icons/im";
 import "./header.css";
-import { Link } from "react-router-dom";
+import * as Icon from "react-bootstrap-icons";
+import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
   const [dropdown, setDropdown] = useState(false);
+  const location = useLocation(); // once ready it returns the 'window.location' object
+  const [url, setUrl] = useState(null);
+  useEffect(() => {
+    setUrl(location.pathname);
+  }, [location]);
 
   return (
     <>
-      <div className="header">
+      <div className="header container">
         <div className="brand center">
           <Link to="/">
-            <span style={{ color: "#FFF2D8" }}>TELEPATHIST SAMRAT</span> |
-            <span style={{ color: " #FF4B91" }}> Protfolio</span>
+            <span className="brandTitle">TELEPATHIST SAMRAT</span>
           </Link>
         </div>
 
         <ul className="nav center">
-          <li>
+          <li className={url == "/" ? "active" : null}>
             <Link to="/">Home</Link>
           </li>
-          <li>
+          <li className={url == "/projects" ? "active" : null}>
             <Link to="/projects">Projects</Link>
           </li>
-          <li>
+          <li className={url == "/abouts" ? "active" : null}>
             <Link to="/abouts">Abouts</Link>
           </li>
-          <li>
+          <li className={url == "/contacts" ? "active" : null}>
             <Link to="/contacts">Contacts</Link>
           </li>
         </ul>

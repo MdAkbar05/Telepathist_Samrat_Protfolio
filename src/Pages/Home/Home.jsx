@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import * as Icon from "react-bootstrap-icons";
 import "./home.css";
 import profile from "../../assets/img/MD_Akbar_Hossan_UI_IMG.png";
-
+import Container from "react-bootstrap/Container";
 const Home = () => {
-  const [activeButton, setActiveButton] = useState(2);
+  const [activeButton, setActiveButton] = useState(1);
 
   const handleClick = (buttonNumber) => {
     setActiveButton(buttonNumber);
@@ -13,15 +14,54 @@ const Home = () => {
   return (
     <>
       {activeButton == 1 ? (
-        <div className="portfolio-container protfolio-active">
+        <Container className="portfolio-container protfolio-active">
           <div className="portfolio-content">
             <h1 className="portfolio-title">
-              Hello <br /> I'm a{" "}
-              <span style={{ color: "#FF4B91" }}>MERN STACK</span> Developer
+              Hey ! <br />{" "}
+              <span className="subTitle">I'm a MERN STACK Developer</span>
             </h1>
             <p className="portfolio-description">
               I have been working with Mern Stack for the past two years.
             </p>
+            <div className="contacts">
+              <Link to="https://www.facebook.com/samrat.akbar.9883">
+                <Icon.Facebook
+                  size={25}
+                  className="fb"
+                  color="#59CE8F"
+                  style={{
+                    margin: "0px 15px 0px 4px",
+                  }}
+                />
+              </Link>
+              <Link to="https://github.com/MdAkbar05">
+                <Icon.Github
+                  className="gh"
+                  size={25}
+                  color="#59CE8F"
+                  style={{
+                    marginRight: "15px",
+                  }}
+                />
+              </Link>
+              <Link to="https://www.linkedin.com/in/md-akbar-hossan-765417249/">
+                <Icon.Linkedin
+                  className="lkn"
+                  size={25}
+                  color="#59CE8F"
+                  style={{ borderRadius: "50%", marginRight: "15px" }}
+                />
+              </Link>
+              <Link to="https://www.instagram.com/mdakbarhossansamrat/">
+                <Icon.Instagram
+                  className="inst"
+                  size={25}
+                  color="#59CE8F"
+                  style={{ borderRadius: "50%" }}
+                />
+              </Link>
+            </div>
+            <br />
             <a
               href="/path/to/your/cv.pdf"
               download
@@ -39,11 +79,11 @@ const Home = () => {
               height={300}
             />
           </div>
-        </div>
+        </Container>
       ) : null}
 
       {activeButton == 2 ? (
-        <div className="profile-container">
+        <Container className="profile-container">
           <div className="main-profile">
             <div className="profile-img">
               <img src={profile} alt="Profile" width={70} height={60} />
@@ -54,6 +94,44 @@ const Home = () => {
               <p className="location">
                 Agrabad, Halishahar, Chattogram, Bangladesh
               </p>
+              <div className="contacts">
+                <Link to="https://www.facebook.com/samrat.akbar.9883">
+                  <Icon.Facebook
+                    size={25}
+                    className="fb"
+                    color="#59CE8F"
+                    style={{
+                      margin: "0px 15px 0px 4px",
+                    }}
+                  />
+                </Link>
+                <Link to="https://github.com/MdAkbar05">
+                  <Icon.Github
+                    className="gh"
+                    size={25}
+                    color="#59CE8F"
+                    style={{
+                      marginRight: "15px",
+                    }}
+                  />
+                </Link>
+                <Link to="https://www.linkedin.com/in/md-akbar-hossan-765417249/">
+                  <Icon.Linkedin
+                    className="lkn"
+                    size={25}
+                    color="#59CE8F"
+                    style={{ borderRadius: "50%", marginRight: "15px" }}
+                  />
+                </Link>
+                <Link to="https://www.instagram.com/mdakbarhossansamrat/">
+                  <Icon.Instagram
+                    className="inst"
+                    size={25}
+                    color="#59CE8F"
+                    style={{ borderRadius: "50%" }}
+                  />
+                </Link>
+              </div>
               <div className="button-group">
                 <Link className="msg" to="/">
                   Message
@@ -66,28 +144,27 @@ const Home = () => {
           </div>
           <div className="profile-details">
             <h2 style={{ textAlign: "center", paddingBottom: "20px" }}>
-              Identity
+              Personal Information
             </h2>
             <p className="info">
-              <span style={{ color: "#FF4B91" }}>Full Name :</span> MD Akbar
-              Hossan
+              <span>Full Name :</span> MD Akbar Hossan
             </p>
             <p className="info">
-              <span style={{ color: "#FF4B91" }}>Email :</span>{" "}
-              samratakbar667466@gmail.com
+              <span>Email :</span> samratakbar667466 <br />
+              @gmail.com
             </p>
             <p className="info">
-              <span style={{ color: "#FF4B91" }}>Phone :</span> +823240324
+              <span>Phone :</span> +823240324
             </p>
             <p className="info">
-              <span style={{ color: "#FF4B91" }}>Phone :</span> +8801879808105
+              <span>Phone :</span> +8801879808105
             </p>
             <p className="info">
-              <span style={{ color: "#FF4B91" }}>Address :</span>
+              <span>Address :</span>
               Agrabad, Halishahar, Chattogram, Bangladesh
             </p>
           </div>
-        </div>
+        </Container>
       ) : null}
       {activeButton == 3 ? <h2>Its Recent Activity</h2> : null}
       {/* *********************************************** */}

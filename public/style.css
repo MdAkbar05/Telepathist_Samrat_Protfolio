@@ -8,8 +8,7 @@
 }
 :root {
     --dark: rgb(30, 30, 30);
-    --secondary: #FF4B91;
-    --textColor:#fff;
+    --textColor:#E8F9FD;
   }
 body{
     background: var(--dark);
