@@ -1,7 +1,13 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import * as Icon from "react-bootstrap-icons";
 import "./home.css";
+import { Stack } from "@mui/material";
+import {
+  FacebookRounded,
+  GitHub,
+  Instagram,
+  LinkedIn,
+} from "@mui/icons-material";
 import profile from "../../assets/img/MD_Akbar_Hossan_UI_IMG.png";
 import Container from "react-bootstrap/Container";
 const Home = () => {
@@ -23,50 +29,40 @@ const Home = () => {
             <p className="portfolio-description">
               I have been working with Mern Stack for the past two years.
             </p>
-            <div className="contacts">
+            <Stack
+              direction="row"
+              spacing={1}
+              alignItems="flex-end"
+              className="contacts"
+            >
               <Link to="https://www.facebook.com/samrat.akbar.9883">
-                <Icon.Facebook
-                  size={25}
+                <FacebookRounded
                   className="fb"
-                  color="#59CE8F"
-                  style={{
-                    margin: "0px 15px 0px 4px",
-                  }}
+                  sx={{ fontSize: 32, color: "#59CE8F" }}
                 />
               </Link>
               <Link to="https://github.com/MdAkbar05">
-                <Icon.Github
+                <GitHub
                   className="gh"
-                  size={25}
-                  color="#59CE8F"
-                  style={{
-                    marginRight: "15px",
-                  }}
-                />
-              </Link>
-              <Link to="https://www.linkedin.com/in/md-akbar-hossan-765417249/">
-                <Icon.Linkedin
-                  className="lkn"
-                  size={25}
-                  color="#59CE8F"
-                  style={{ borderRadius: "50%", marginRight: "15px" }}
+                  sx={{ fontSize: 30, color: "#59CE8F" }}
                 />
               </Link>
               <Link to="https://www.instagram.com/mdakbarhossansamrat/">
-                <Icon.Instagram
+                <Instagram
                   className="inst"
-                  size={25}
-                  color="#59CE8F"
-                  style={{ borderRadius: "50%" }}
+                  sx={{ fontSize: 30, color: "#59CE8F" }}
                 />
               </Link>
-            </div>
+              <Link to="https://github.com/MdAkbar05">
+                <LinkedIn
+                  className="lkn"
+                  sx={{ fontSize: 32, color: "#59CE8F" }}
+                />
+              </Link>
+            </Stack>
+            {/* ----------------------------------------------- */}
             <br />
-            <a
-              href="/path/to/your/cv.pdf"
-              download
-              className="portfolio-button"
-            >
+            <a href="./AkbarHossanCV.pdf" download className="portfolio-button">
               Download CV
             </a>
           </div>
@@ -89,49 +85,42 @@ const Home = () => {
               <img src={profile} alt="Profile" width={70} height={60} />
             </div>
             <div className="profile-info">
-              <h4 className="profile-name">MD Akbar Hossan Icon</h4>
+              <h4 className="profile-name">MD Akbar Hossan </h4>
               <p className="title">MERN STACK Developer</p>
               <p className="location">
                 Agrabad, Halishahar, Chattogram, Bangladesh
               </p>
-              <div className="contacts">
+              <Stack
+                direction="row"
+                spacing={1}
+                alignItems="flex-end"
+                className="contacts"
+              >
                 <Link to="https://www.facebook.com/samrat.akbar.9883">
-                  <Icon.Facebook
-                    size={25}
+                  <FacebookRounded
                     className="fb"
-                    color="#59CE8F"
-                    style={{
-                      margin: "0px 15px 0px 4px",
-                    }}
+                    sx={{ fontSize: 32, color: "#59CE8F" }}
                   />
                 </Link>
                 <Link to="https://github.com/MdAkbar05">
-                  <Icon.Github
+                  <GitHub
                     className="gh"
-                    size={25}
-                    color="#59CE8F"
-                    style={{
-                      marginRight: "15px",
-                    }}
-                  />
-                </Link>
-                <Link to="https://www.linkedin.com/in/md-akbar-hossan-765417249/">
-                  <Icon.Linkedin
-                    className="lkn"
-                    size={25}
-                    color="#59CE8F"
-                    style={{ borderRadius: "50%", marginRight: "15px" }}
+                    sx={{ fontSize: 30, color: "#59CE8F" }}
                   />
                 </Link>
                 <Link to="https://www.instagram.com/mdakbarhossansamrat/">
-                  <Icon.Instagram
+                  <Instagram
                     className="inst"
-                    size={25}
-                    color="#59CE8F"
-                    style={{ borderRadius: "50%" }}
+                    sx={{ fontSize: 30, color: "#59CE8F" }}
                   />
                 </Link>
-              </div>
+                <Link to="https://github.com/MdAkbar05">
+                  <LinkedIn
+                    className="lkn"
+                    sx={{ fontSize: 32, color: "#59CE8F" }}
+                  />
+                </Link>
+              </Stack>
               <div className="button-group">
                 <Link className="msg" to="/">
                   Message
