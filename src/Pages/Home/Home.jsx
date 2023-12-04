@@ -8,11 +8,24 @@ import {
   Instagram,
   LinkedIn,
 } from "@mui/icons-material";
-import profile from "../../assets/img/MD_Akbar_Hossan_UI_IMG.png";
+import profile from "../../assets/img/MD_Akbar.png";
 import Container from "react-bootstrap/Container";
 const Home = () => {
   const [activeButton, setActiveButton] = useState(1);
-
+  let windowHeight;
+  const hideSwitch = () => {
+    windowHeight = window.scrollY;
+    if (windowHeight > 99) {
+      const switchItem = document.getElementById("switching-menu");
+      switchItem.classList.add("hide");
+      switchItem.classList.remove("show");
+    } else if (windowHeight < 100) {
+      const switchItem = document.getElementById("switching-menu");
+      switchItem.classList.remove("hide");
+      switchItem.classList.add("show");
+    }
+  };
+  window.addEventListener("scroll", hideSwitch);
   const handleClick = (buttonNumber) => {
     setActiveButton(buttonNumber);
     // Add logic to handle button click here
@@ -68,6 +81,7 @@ const Home = () => {
           </div>
           <div className="protfolio-img">
             <img
+              style={{ borderRadius: "5px" }}
               className="img"
               src={profile}
               alt="Profile"
@@ -82,7 +96,7 @@ const Home = () => {
         <Container className="profile-container">
           <div className="main-profile">
             <div className="profile-img">
-              <img src={profile} alt="Profile" width={70} height={60} />
+              <img src={profile} alt="Profile" width={50} height={50} />
             </div>
             <div className="profile-info">
               <h4 className="profile-name">MD Akbar Hossan </h4>
@@ -157,27 +171,29 @@ const Home = () => {
       ) : null}
       {activeButton == 3 ? <h2>Its Recent Activity</h2> : null}
       {/* *********************************************** */}
-      <div className="switching-menu">
-        <button
-          className={activeButton === 1 ? "active" : ""}
-          onClick={() => handleClick(1)}
-        >
-          CV Download
-        </button>
-        <button
-          className={activeButton === 2 ? "active" : ""}
-          onClick={() => handleClick(2)}
-        >
-          Profile View
-        </button>
-        <button
-          className={activeButton === 3 ? "active" : ""}
-          onClick={() => handleClick(3)}
-        >
-          Recent Activity
-        </button>
-        {/* Add more buttons as needed */}
-      </div>
+      {windowHeight > 99 ? null : (
+        <div className="switching-menu" id="switching-menu">
+          <button
+            className={activeButton === 1 ? "active" : ""}
+            onClick={() => handleClick(1)}
+          >
+            Download
+          </button>
+          <button
+            className={activeButton === 2 ? "active" : ""}
+            onClick={() => handleClick(2)}
+          >
+            Profile
+          </button>
+          <button
+            className={activeButton === 3 ? "active" : ""}
+            onClick={() => handleClick(3)}
+          >
+            Activity
+          </button>
+          {/* Add more buttons as needed */}
+        </div>
+      )}
     </>
   );
 };

@@ -6,6 +6,7 @@
     --cardBG: #2b2b2ba0;
     --textColor:#E8F9FD;
     --secondText:#000000;
+    --border:20px;
   }
 
   .portfolio-container {
@@ -32,21 +33,34 @@
     left: 50%;
     transform: translateX(-50%);
   }
+  .hide{
+    transition: .5s all;
+    transform: translateX(-800px);
+  }
+  .show{
+    transition: .5s all;
+    transform: translateX(0px);
+  }
   
   .switching-menu button {
-    border: 0.5px solid var(--main);
-    background-color: var(--textColor);
-    color: var(--dark);
+    border: 1px solid var(--main);
+    background-color: transparent;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(15px);
+    color: var(--textColor);
     transition: 0.5s all;
-    border-radius: 1.4rem;
+    border-radius: var(--border);
     padding: 8px 15px;
     margin: 0 10px;
     cursor: pointer;
     font-size: 14px;
+    font-weight: bold;
   }
   
   .switching-menu button.active {
-    color: var(--textColor) ;
+    border: 1px solid var(--main);
+
+    color: var(--main) ;
     background: var(--dark);
   }
   
@@ -85,7 +99,7 @@
     border: 1px solid var(--main);
     background-color: var(--dark); /* Primary button color */
     color: var(--textColor);
-    border-radius: 15px;
+    border-radius: var(--border);
     transition: 0.3s;
   }
   
@@ -155,13 +169,19 @@
   box-shadow: 1px 5px 30px #ff4b9066
 } */
 .main-profile .profile-img{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
     background-color: rgba(0, 0, 0, 0.415);
-    border-radius: 60%;
+    border-radius:50%;
     border: 1px solid var(--main);
-    padding: 15px;
-    transform: translateY(30px);
+    padding: 0px;
+    transform: translateY(30px) scale(1.5);
 
 }
+
 .main-profile .profile-info{
   transform: translateY(50px);
     display: flex;
@@ -339,14 +359,20 @@ color: var(--textColor);
     margin-bottom: 20px;
     width: 90%;
   }
-
   .switching-menu {
     display: flex;
     justify-content: center;
     position: fixed;
     bottom: 20px;
-
-    transform: translateX(-55%);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .switching-menu button {
+    padding: 8px 15px;
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
   }
 
   
