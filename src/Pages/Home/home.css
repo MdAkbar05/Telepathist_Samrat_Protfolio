@@ -374,6 +374,13 @@ color: var(--textColor);
     font-size: 14px;
     font-weight: bold;
   }
-
+  .hide{
+    transition: .5s all;
+    transform: translateX(-800px);
+  }
+  .show{
+    transition: .5s all;
+    transform: translateX(-140px);
+  }
   
 }
