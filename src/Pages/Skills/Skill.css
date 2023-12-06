@@ -1,0 +1,46 @@
+
+:root {
+    --dark:#1E1E1E ;
+    --main:#59CE8F;
+    --secondMain:#100720;
+    --cardBG: #2b2b2ba0;
+    --textColor:#E8F9FD;
+    --secondText:#000000;
+    --border:20px;
+  }
+
+.center{
+    text-align: center;
+}
+.ht{
+    color: var(--main);
+}
+
+.skill{
+    background-color: var(--cardBG);
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+img{
+    padding: 5px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+.item{
+    margin: 5px;
+    background-color: var(--dark);
+    padding: 20px;
+    flex: 30%;
+    text-align: center;
+}
+.item h3{
+    color: var(--main);
+}
+.item:hover{
+    box-shadow: #59ce905a 0px 3px 8px;
+    border: 1px solid var(--main);
+}

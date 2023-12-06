@@ -16,7 +16,7 @@
     background-size: cover; */
     color: var(--textColor); /* Text color */
     padding: 10px;
-    height: 100vh;
+    height: 90vh;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -28,18 +28,15 @@
 .switching-menu {
     display: flex;
     justify-content: center;
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
+
   }
   .hide{
     transition: .5s all;
-    transform: translateX(-800px);
+    transform: translateX(-1000px);
   }
   .show{
     transition: .5s all;
-    transform: translateX(0px);
+    transform: translateX(0px );
   }
   
   .switching-menu button {
@@ -135,10 +132,10 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover; */
-    margin-top: 50px;
+    margin-top: 10px;
     z-index: 10;
     color: var(--textColor); /* Text color */
-    height: 100vh;
+    height: 90vh;
     display: flex;
     align-items: center;
     justify-content: space-around;

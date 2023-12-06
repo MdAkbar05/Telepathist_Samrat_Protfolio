@@ -10,6 +10,7 @@ import {
 } from "@mui/icons-material";
 import profile from "../../assets/img/AkbarHossan.png";
 import Container from "react-bootstrap/Container";
+import Skill from "../Skills/Skill";
 const Home = () => {
   const [activeButton, setActiveButton] = useState(1);
   let windowHeight;
@@ -194,6 +195,7 @@ const Home = () => {
           {/* Add more buttons as needed */}
         </div>
       )}
+      <Skill />
     </>
   );
 };
