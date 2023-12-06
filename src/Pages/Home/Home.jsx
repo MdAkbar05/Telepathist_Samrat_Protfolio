@@ -8,7 +8,7 @@ import {
   Instagram,
   LinkedIn,
 } from "@mui/icons-material";
-import profile from "../../assets/img/MD_Akbar.png";
+import profile from "../../assets/img/AkbarHossan.png";
 import Container from "react-bootstrap/Container";
 const Home = () => {
   const [activeButton, setActiveButton] = useState(1);
