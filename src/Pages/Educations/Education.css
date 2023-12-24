@@ -1,0 +1,56 @@
+
+:root {
+    --dark:#1E1E1E ;
+    --main:#59CE8F;
+    --secondMain:#100720;
+    --cardBG: #2b2b2ba0;
+    --textColor:#E8F9FD;
+    --secondText:#000000;
+    --border:20px;
+  }
+
+
+
+.Education{
+    margin-top: 20px;
+    background-color: var(--cardBG);
+    padding: 20px 0;
+    border-radius: 5px;
+}
+.Introduce{
+    position: relative;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.left{
+    border-radius: 10px;
+    margin: 5px;
+    padding: 20px;
+    flex: 30%;
+    text-align: center;
+}
+.left img{
+    box-shadow: 5px 5px 200px 20px var(--main);
+}
+
+.right{
+    border-radius: 10px;
+    margin: 5px;
+    background-color: var(--dark);
+    padding: 20px;
+    flex: 30%;
+    text-align: center;
+}
+.right .degree{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--cardBG);
+    margin-bottom: 15px;
+    border-radius: var(--border);
+    color: var(--main);
+}

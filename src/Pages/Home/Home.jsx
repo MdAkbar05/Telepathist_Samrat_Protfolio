@@ -11,6 +11,8 @@ import {
 import profile from "../../assets/img/AkbarHossan.png";
 import Container from "react-bootstrap/Container";
 import Skill from "../Skills/Skill";
+import Services from "../Services/Services";
+import Education from "../Educations/Education";
 const Home = () => {
   const [activeButton, setActiveButton] = useState(1);
   let windowHeight;
@@ -37,11 +39,17 @@ const Home = () => {
         <Container className="portfolio-container protfolio-active">
           <div className="portfolio-content">
             <h1 className="portfolio-title">
-              Hey ! <br />{" "}
-              <span className="subTitle">I'm a MERN STACK Developer</span>
+              <span>Hey</span> ! <br /> I'm{" "}
+              <span className="subTitle">Md Akbar Hossan</span> <br />
+              <span style={{ fontSize: "1.8rem" }}>
+                <span className="subTitle2">MERN STACK</span> Developer
+              </span>
             </h1>
             <p className="portfolio-description">
-              I have been working with Mern Stack for the past two years.
+              I have been working with Mern Stack for the past two years. <br />{" "}
+              And follow to build the application MVC Pattern
+              <br />
+              architecture using React JS, Node JS, Express JS, and MongoDB.
             </p>
             <Stack
               direction="row"
@@ -196,6 +204,8 @@ const Home = () => {
         </div>
       )}
       <Skill />
+      <Services />
+      <Education />
     </>
   );
 };

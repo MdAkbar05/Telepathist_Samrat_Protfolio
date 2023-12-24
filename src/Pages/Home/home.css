@@ -64,16 +64,19 @@
  /* CV Download View  */
 
   .portfolio-content {
-
     text-align: left;
   }
   
   .portfolio-title {
-    font-size: 3rem;
-    margin-bottom: 20px;
+    font-size: 2.7rem;
   }
   .portfolio-title .subTitle{
     color: var(--main);
+    margin-bottom: 10px;
+  }
+  .portfolio-title .subTitle2{
+    color: var(--main);
+    margin-bottom: 10px;
   }
 
   .contacts .fb:hover,
@@ -84,8 +87,8 @@
   }
   
   .portfolio-description {
-    font-size: 1.5rem;
-    margin-bottom: 30px;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
   }
   
   .portfolio-button {
@@ -105,24 +108,23 @@
   }
 
   .protfolio-img{
-    background-color:transparent ;
+    box-shadow: 1px -5px 200px 0px var(--main);
+    background-color:var(--cardBG) ;
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
     padding: 20px;
     border-radius: 10px;
-    border: 2px solid white;
+    border: 2px solid var(--main);
     transition: 0.3s;
   }
-  .protfolio-img:hover{
-    border: 2px solid var(--secondary);
-  }
+
   .protfolio-img img{
     transition: 0.3s;
   }
   .protfolio-img img:hover{
     transform: scale(1.1);
   }
-  
+
 
 
   /* Profile view  */
@@ -293,7 +295,7 @@ color: var(--textColor);
     padding: 20px;
     border-radius: 10px;
     border: 2px solid white;
-    box-shadow: 1px 5px 30px rgb(255, 255, 255, 0.3);
+    box-shadow: 1px -5px 200px 0px var(--main);
   }
 .protfolio-img img{
   width: 100%;
@@ -325,7 +327,8 @@ color: var(--textColor);
     display: none;
   }
   .portfolio-content{
-    margin-left: 50px;
+    margin:auto;
+    width: 85%;
 
   }
   
@@ -345,10 +348,19 @@ color: var(--textColor);
     border: 0px;
   }
   .portfolio-title {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     margin-bottom: 10px;
-    width: 90%;
 
+
+  }
+  .subTitle{
+    font-size: 1.7rem;
+    font-weight: 500;
+  }
+  
+  .subTitle2{
+    font-size: 1.4rem;
+    font-weight: 500;
   }
   
   .portfolio-description {
